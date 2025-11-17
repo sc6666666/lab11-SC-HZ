@@ -16,12 +16,7 @@ def subtract(a, b):
 def multiply(a, b):
     return a * b
 
-def divide(a, b):
-    if a == 0:
-        raise ZeroDivisionError
-    else:
-        return b / a
-    # raise ZeroDivisionError if a == 0
+
 
 def log(a, b):
     if a <= 0 or a == 1:
