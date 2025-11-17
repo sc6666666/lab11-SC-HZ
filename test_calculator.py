@@ -23,8 +23,8 @@ class TestCalculator(unittest.TestCase):
             calculator.logarithm(2, 0)
 
     def test_multiply(self):
-        self.assertEqual(calculator.multiply(2, 3), 6)
-        self.assertEqual(calculator.multiply(-2, 4), -8)
+        self.assertEqual(calculator.mul(2, 3), 6)
+        self.assertEqual(calculator.mul(-2, 4), -8)
 
     def test_divide(self):
         self.assertEqual(calculator.div(10, 2), 5)
