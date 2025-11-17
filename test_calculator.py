@@ -1,5 +1,5 @@
 import unittest
-from calculator import *
+
 
 class TestCalculator(unittest.TestCase):
     ######### Partner 2
@@ -54,3 +54,19 @@ class TestCalculator(unittest.TestCase):
 # Do not touch this
 if __name__ == "__main__":
     unittest.main()
+import pytest
+import calculator
+def test_add():
+assert calculator.add(-1, 1) == 0
+def test_subtract():
+assert calculator.subtract(5, 3) == 2
+def test_divide_by_zero():
+with pytest.raises(ZeroDivisionError):
+calculator.div(0, 5)
+def test_logarithm():
+assert calculator.logarithm(2, 8) == pytest.approx(3)
+def test_log_invalid_base():
+with pytest.raises(ValueError):
+calculator.logarithm(1, 10)
+with pytest.raises(ValueError):
+calculator.logarithm(2, 0)
