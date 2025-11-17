@@ -27,8 +27,8 @@ class TestCalculator(unittest.TestCase):
         self.assertEqual(calculator.mul(-2, 4), -8)
 
     def test_divide(self):
-        self.assertEqual(calculator.div(10, 2), 5)
-        self.assertEqual(calculator.div(-9, 3), -3)
+        self.assertEqual(calculator.div(2, 10), 5)
+        self.assertEqual(calculator.div(3, -9), -3)
 
     def test_log_invalid_argument(self):
         with self.assertRaises(ValueError):
